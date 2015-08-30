@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app>
+    <filter>
+        <filter-name>LiftFilter</filter-name>
+        <display-name>Lift Filter</display-name>
+        <description>The Filter that intercepts lift calls</description>
+        <filter-class>net.liftweb.http.LiftFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LiftFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <context-param>
+        <param-name>org.eclipse.jetty.servlet.SessionCookie</param-name>
+        <param-value>APPSESSIONID</param-value>
+    </context-param>
+</web-app>
